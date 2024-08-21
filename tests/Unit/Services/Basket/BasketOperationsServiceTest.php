@@ -9,6 +9,7 @@ use App\Repositories\ProductRepository;
 use App\Services\Basket\ApplyOfferService;
 use App\Services\Basket\BasketOperationsService;
 use App\Services\Delivery\CalculateDeliveryService;
+use App\Services\Delivery\DeliveryContext;
 use App\Services\Offer\OfferContext;
 use Tests\TestCase;
 
@@ -21,7 +22,7 @@ class BasketOperationsServiceTest extends TestCase
         parent::setUp();
 
         $productRepository = new ProductRepository();
-        $deliveryStrategy = new CalculateDeliveryService();
+        $deliveryStrategy = new CalculateDeliveryService(new DeliveryContext());
         $offerStrategy = new ApplyOfferService(new OfferContext());
 
         $this->basket = new BasketOperationsService($productRepository, $deliveryStrategy, $offerStrategy);

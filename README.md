@@ -20,15 +20,24 @@ This project is a proof of concept for Acme Widget Co's new sales system. The sy
 
 - **Buy one Red Widget, get the second one at half price**
 - **Buy two Green Widget, get the third for free**
+- **NOTE : i assume that we just apply one offer (the customer choose it) on the order even the order may achieve multiple offer**
 
 ## Features
 
 - **Add Products to Basket:** Allows adding products to the basket by product code.
 - **Calculate Total:** Computes the total cost of the basket, applying delivery charges and offers.
 
+
 ## Installation
 
-1. **Clone the Repository**
+1. **Prerequisites**
+
+   - PHP 8.x
+   - Composer
+   - Docker
+
+
+2. **Clone the Repository**
 
    ```bash
    git clone https://github.com/AbdElmoneimMohamed/acme-widget-co.git
@@ -50,7 +59,6 @@ This project is a proof of concept for Acme Widget Co's new sales system. The sy
 | `make rebuild`     | rebuild without cache                              |
 | `make restart`     | restart docker                                     |
 | `make migrate`     | run migration                                      |
-                            |
 | `make clear`       | clear cache                                        |
 
 
