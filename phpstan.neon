@@ -1,0 +1,9 @@
+parameters:
+    level: max
+    paths:
+        - app
+        - tests
+    ignoreErrors:
+        - '#Class App\\Models\\User uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory but does not specify its types: TFactory#'
+        - '#Class App\\Models\\Product uses generic trait Illuminate\\Database\\Eloquent\\Factories\\HasFactory but does not specify its types: TFactory#'
+        - '#Call to an undefined method App\\Services\\Basket\\BasketOperationsService::expects\(\)#'
